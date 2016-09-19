@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demonstrating events in Javascript</title>
+
+
+<script>
+
+
+function onClick(){
+	
+	document.getElementById("output").innerHTML = "You have Clicked here";
+}
+
+function onMouseOver() {
+	
+	document.getElementById("output").innerHTML = "On mouseover";
+	
+}
+
+
+function onMouseOut() {
+	document.getElementById("output").innerHTML = "On mouse_out";
+	
+}
+
+
+</script>
+</head>
+<body>
+
+
+
+
+
+  
+  
+  
+  
+      <button onclick = "onClick()">Clikc here for onclick</button></br>
+      <button onmouseover = "onMouseOver()">Bring the cursor on this button to display </button></br>
+      <button onmouseout = "onMouseOut()">Bring the curser on this and then remove </button></br>
+      
+      <p id = "output"></p>
+    
+  
+
+</body>
+</html>

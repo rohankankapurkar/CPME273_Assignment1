@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Kindly fill out the below information </h1>
+ Enter the name: 
+     <input id = "name" type="text" >
+  <br>
+  Enter your mail id:
+  <input id = "price" type="text" >
+  <br>
+  Enter the addres:
+  <input id = "expiry" type="text" >
+  <br><br>
+  <button onclick="addMedicine()" style="width: 123px; height: 5px">Click here to add this information</button></br></br></br></br>
+  
+  <p id = "output"> </p>
+<div id="result"></div>
+
+<script>
+function medicine (name,price,expiry) {
+	this.name =name;
+	this.price = price;
+	this.expiry = expiry;
+
+}
+
+var medicines = [];
+var i = medicines.length;
+
+function addMedicine (){
+	
+	
+	i =medicines.length;
+
+	var name = document.getElementById("name").value;
+	var price = document.getElementById("price").value;
+	var expiry = document.getElementById("expiry").value;
+	
+	medicines[i] = new medicine(name,price,expiry);
+	
+	if (typeof(Storage) !== "undefined") {
+	    
+	    localStorage.setItem("lastname", medicines[i].name);
+	    
+	    document.getElementById("result").innerHTML = "Hey  " + localStorage.getItem("lastname")+ ".  Thank you for submitting the from " ;
+	} else {
+	    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+
+	
+	
+}
+
+</script>
+
+</body>
+</html>
+

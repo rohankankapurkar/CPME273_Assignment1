@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using strict mode here</title>
+
+<script>
+
+"use strict";
+function show() {
+	
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var mail =document.getElementById("mail").value;
+	
+	
+	
+	alert("Kindly check the entries you have entered.  Name : "+fname+ " " + lname + "  . Email:   " + mail);
+	
+	try 
+	{
+		fullname  = fname + "  " + lname;
+	}
+	
+	catch(err)
+	{
+		alert("Since Fullname is not defined and directly assigned. The strict mode will not allow this. Hence throwing this exception =   "+ err.messege);
+	}
+}
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+ 
+  <p>This is demonstration for strict mode</p>
+  Enter the first name:
+  <input id = "fname" type="text" >
+  <br>
+  Enter the last name:
+  <input id = "lname" type="text" >
+  <br>
+  Enter the Email ID:
+  <input id = "mail" type="text" >
+  <br>
+  <button onclick="show()">Click here to show the details</button></br></br></br></br>
+  
+  <p id = "output"> </p>
+  
+  
+  
+  
+
+
+
+
+</body>
+</html>

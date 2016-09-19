@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header, footer {
+    color: gray;
+    background-color: black;
+    clear: left;
+}
+
+form {
+    width: 400px;
+    padding : 5px;
+    align-text : left;
+    border : 1px solid black;
+    align : center; 
+    margin : 70px auto;
+    }
+ 
+form  { display: table;      }
+input { display: table-cell; }
+
+</style>
+
+<script>
+function validation() {
+    var x = document.forms["form"]["name"].value;
+    var y = document.forms["form"]["email"].value;
+    if (x == null || x == "" || y == null || y == "") {
+        alert("Please fill in the Name before submitting"); 
+    }
+    
+    if (document.forms["form"]["points"].value > 2 && !(x == null || x == "" || y == null || y == "")){
+    	alert( "We are pleased to have positive response from you.Thank you for your time");
+    }
+       
+    //document.getElementById("output").innerHTML = "Thank you for your response";
+}
+</script>
+</head>
+<body>
+<h1> <header><center>Please submit your feedback for the System</center> </header></h1>
+<div class="container">
+
+<form id ="form" onsubmit=" validation()" >
+Full Name: <input type="text" id="name"><br>
+Email Id : <input type="text" id = "email"><br>
+Address: <input type= "text" id = "address"><br>
+Comments : <input type= "comments" id = "comments"><br>
+
+How would you like to rate our application <input type="range" id="points" min="0" max="5"><br><br>
+<input type="submit" value="Submit the form">
+</form>
+</div>
+<footer><center>Thank you for your valuable time</center>
+</body>
+</html>
+

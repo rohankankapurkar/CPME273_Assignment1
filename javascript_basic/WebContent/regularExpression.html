@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function checkPwd(){
+	
+	var name = document.getElementById("name").value;
+	var mail = document.getElementById("mail").value;
+	var password = document.getElementById("password").value;
+	
+	
+	var x = /^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z])[A-Za-z0-9]{7,}$/;
+
+		
+	
+	if(x.test(password))
+		{
+		
+		alert("successfully submitted the information");
+		}
+	else{
+		alert("Password should be more than 7 and must have a number and and upper case alphabet and lower case alphbest");
+	}
+
+	
+	
+	
+	
+}
+</script>
+
+<meta charset="UTF-8">
+<title>Password checker</title>
+</head>
+<body>
+
+
+<h1>Sign up</h1>
+
+  Enter your name :
+  <input id = "name" type="text" >
+  <br>
+  Enter your your mailId:
+  <input id = "mail" type="text" >
+  <br>
+  Enter your password:
+  <input id = "password" type="password" >
+  <br>
+  <br>
+  <br>
+  <button onclick="checkPwd()">Click here to Sign up</button></br></br></br></br>
+  
+</body>
+</html>

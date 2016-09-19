@@ -1,0 +1,84 @@
+
+
+<html>
+<body>
+<h1>This is GPA calculator</h1>
+<br>
+
+
+Enter your First Year marks 
+<input type="text" id= "first">
+
+<br>
+
+
+Enter your Second year marks
+<input type="text" id="second">
+
+<br>
+
+
+
+
+Enter your Third year marks
+<input type="text" id="third">
+
+
+
+<br>
+
+
+Enter your Fourth year marks
+<input type="text" id="fourth">
+
+<br>
+
+
+
+<p><button id = "calculate" onclick = "calculateGPA() ">Submit Marks</button></p><br>
+<br>
+
+<p id = "output"> </p>	
+
+
+<br>
+
+</body>
+
+<script>
+
+function calculateGPA() {
+	
+	var first = document.getElementById("first").value;
+	//document.getElementById("output").innerHTML = first+ "sup";
+	//alert(parseInt(first));
+
+	var second = document.getElementById("second").value;
+	var third = document.getElementById("third").value;
+	var fourth = document.getElementById("fourth").value;
+	
+	
+	var avg = (parseInt(first) + parseInt(second) + parseInt(third) + parseInt(fourth))/4;
+	
+	document.getElementById("output").innerHTML = "your avg out of 100 is"+avg;
+	
+	if (avg > 90)
+          alert("your GPA is 4");
+	if (avg<=90 && avg >= 70)
+		alert("your GPA is 3 ");
+	if (avg < 70 && avg >=60)
+		alert("your GPA is 2");
+	if (avg <60)
+		alert("your GPA is 1");
+	
+}
+
+
+
+  
+
+
+
+</script>
+
+</html>

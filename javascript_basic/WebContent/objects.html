@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {margin:50px 0px; padding:0px;
+    text-align:center;}
+    </style>
+<h1>This is contact list</h1>
+<p>Enter the below details to add new contact</p>
+  First Name:
+  <input id = "fname" type="text" >
+  <br>
+  Last name:
+  <input id = "lname" type="text" >
+  <br>
+  Phone Number:
+  <input id = "number" type="text" >
+  <br>
+  Email ID:
+  <input  id = "email"type="text" >
+  <br><br>
+  <button onclick="addContact()">Click here to add this contact</button></br><br><br>
+  To remove the contact enter the firstname of the contact and click below:
+  <input  id = "remove"type="text" >
+  <br><br>
+  
+  <button onclick= "removeContact()"> Click here to remove contact </button></br></br></br>
+  
+  To search the contact enter firstname here and click below
+  <input  id = "search"type="text" > </br><br>
+  <button onclick = "searchContact()"> Click here to search contact</button></br></br>
+  <button onclick = "showContacts()">Clikc here to show all contacts </button></br>
+<script type="text/javascript" src = "objects.js" > </script>
+
+<p id = "show"> </p>
+<p id= "output"> </p>
+</body>
+</html>
+
